@@ -59,6 +59,13 @@ endif
 PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom-caf/$(QCOM_HARDWARE_VARIANT)
 
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/commonsys-intf/display \
+    vendor/qcom/opensource/commonsys/display \
+    vendor/qcom/opensource/display
+
+PRODUCT_SOONG_NAMESPACES += vendor/qcom/opensource/data-ipa-cfg-mgr
+
 # QCOM HW crypto
 ifeq ($(TARGET_HW_DISK_ENCRYPTION),true)
     TARGET_CRYPTFS_HW_PATH ?= vendor/qcom/opensource/cryptfs_hw
