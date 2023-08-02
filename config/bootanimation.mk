@@ -18,5 +18,4 @@
 TARGET_BOOT_ANIMATION_RES ?= 1080
 
 PRODUCT_PACKAGES += \
-    bootanimation-light \
     bootanimation-dark
