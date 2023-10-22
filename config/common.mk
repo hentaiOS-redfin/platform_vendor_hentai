@@ -31,7 +31,19 @@ PRODUCT_PRODUCT_PROPERTIES += \
     setupwizard.feature.show_pixel_tos=true \
     setupwizard.feature.show_support_link_in_deferred_setup=false \
     setupwizard.feature.skip_button_use_mobile_data.carrier1839=true \
-    setupwizard.theme=glif_v3_light
+    setupwizard.theme=glif_v4_light \
+    setupwizard.feature.enable_wifi_tracker=true
+
+# Enable RKP support
+PRODUCT_PRODUCT_PROPERTIES += \
+    remote_provisioning.hostname=remoteprovisioning.googleapis.com
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+    
+# One Handed Mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
 
 # StorageManager configuration
 PRODUCT_PRODUCT_PROPERTIES += \
