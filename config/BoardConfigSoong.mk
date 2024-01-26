@@ -28,10 +28,18 @@ $(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
 
 SOONG_CONFIG_NAMESPACES += hentaiGlobalVars
 SOONG_CONFIG_hentaiGlobalVars += \
-    target_surfaceflinger_fod_lib
+    target_surfaceflinger_fod_lib \
+    gralloc_handle_has_custom_content_md_reserved_size \
+    gralloc_handle_has_reserved_size 
 
 # Set default values
 TARGET_SURFACEFLINGER_FOD_LIB ?= surfaceflinger_fod_lib
+TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT ?= false
+TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE ?= false
+TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE ?= false
 
 # Soong value variables
 SOONG_CONFIG_hentaiGlobalVars_target_surfaceflinger_fod_lib := $(TARGET_SURFACEFLINGER_FOD_LIB)
+SOONG_CONFIG_hentaiGlobalVars_gralloc_handle_has_ubwcp_format := $(TARGET_GRALLOC_HANDLE_HAS_UBWCP_FORMAT)
+SOONG_CONFIG_hentaiGlobalVars_gralloc_handle_has_custom_content_md_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE)
+SOONG_CONFIG_hentaiGlobalVars_gralloc_handle_has_reserved_size := $(TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE)
